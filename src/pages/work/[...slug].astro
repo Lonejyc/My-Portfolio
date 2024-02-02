@@ -48,6 +48,9 @@ const { Content } = await entry.render();
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content">
 						<Content />
+						<div class="tags">
+							{entry.data.support.map((s) => <Pill>{s}</Pill>)}
+						</div>
 					</div>
 				</div>
 			</main>
