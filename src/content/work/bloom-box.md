@@ -5,10 +5,6 @@ img_alt: A bright pink sheet of paper used to wrap flowers curves in front of ri
 description: |
   We paired with a cutting-edge music API and a team of horticulturalists
   to build AI-generated playlists that maximize houseplant health.
-tags:
-  - Dev
-  - Branding
-  - Backend
 support:
   - HTML
   - SCSS

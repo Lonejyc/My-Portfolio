@@ -6,10 +6,10 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
 			support: z.array(z.string()),
+			git: z.string().optional(),
 		}),
 	}),
 };
