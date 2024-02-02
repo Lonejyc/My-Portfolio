@@ -1,17 +1,23 @@
 ---
+import type { arrayOutputType } from 'astro/zod';
+
 interface Props {
 	title: string;
-	tagline?: string;
+	options: Array<string>;
 	align?: 'start' | 'center';
 }
 
-const { align = 'center', tagline, title } = Astro.props;
+const { align = 'center', options, title } = Astro.props;
 ---
 
 <div class:list={['hero stack gap-4', align]}>
 	<div class="stack gap-2">
 		<h1 class="title">{title}</h1>
-		{tagline && <p class="tagline">{tagline}</p>}
+		<div class="slide">
+			<div class="anim">
+				{options && options.map((option) => <h1 class="animation">{option}</h1>)}
+			</div>
+		</div>
 	</div>
 	<slot />
 </div>
@@ -31,6 +37,19 @@ const { align = 'center', tagline, title } = Astro.props;
 	.title {
 		font-size: var(--text-3xl);
 		color: var(--gray-0);
+	}
+
+	.slide {
+		height: 100px;
+		overflow: hidden;
+	}
+
+	.animation {
+		font-size: 72px;
+		line-height: 100px;
+		color: transparent;
+		-webkit-text-stroke: rebeccapurple 1px;
+		text-transform: uppercase;
 	}
 
 	@media (min-width: 50em) {
