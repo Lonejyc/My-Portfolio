@@ -10,7 +10,7 @@ interface Props {
 const { align = 'center', options, title } = Astro.props;
 ---
 
-<div class:list={['hero stack gap-4', align]}>
+<div class:list={['hero', align]}>
 	<div class="stack gap-2">
 		<h1 class="title">{title}</h1>
 		<div class="slide">
@@ -23,51 +23,19 @@ const { align = 'center', options, title } = Astro.props;
 </div>
 
 <style>
-	.hero {
-		font-size: var(--text-lg);
-		text-align: center;
-	}
-
-	.title,
-	.tagline {
-		max-width: 37ch;
-		margin-inline: auto;
-	}
-
-	.title {
-		font-size: var(--text-3xl);
-		color: var(--gray-0);
-	}
-
 	.slide {
 		height: 100px;
 		overflow: hidden;
+	}
+
+	.anim {
+		animation: anim 15s ease-in-out infinite;
 	}
 
 	.animation {
 		font-size: 72px;
 		line-height: 100px;
 		color: transparent;
-		-webkit-text-stroke: rebeccapurple 1px;
-		text-transform: uppercase;
-	}
-
-	@media (min-width: 50em) {
-		.hero {
-			font-size: var(--text-xl);
-		}
-
-		.start {
-			text-align: start;
-		}
-
-		.start .title,
-		.start .tagline {
-			margin-inline: unset;
-		}
-
-		.title {
-			font-size: var(--text-5xl);
-		}
+		-webkit-text-stroke: var(--secondary-1) 1.2px;
 	}
 </style>
