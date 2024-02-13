@@ -6,8 +6,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
 import Hero from '../components/Hero.astro';
+import Link from '../components/Link.astro';
 import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -33,9 +33,24 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Link
+							name="LinkedIn"
+							link="https://www.linkedin.com/in/jocelyn-marcilloux-buisson/"
+						>
+							<Icon icon="linkedin-logo" size="1.33em" />
+						</Link>
+						<Link
+							name="Twitter"
+							link="https://twitter.com/JocelynBui71089"
+						>
+							<Icon icon="twitter-logo" size="1.33em" />
+						</Link>
+						<Link
+							name="GitHub"
+							link="https://github.com/Lonejyc"
+						>
+							<Icon icon="github-logo" size="1.33em" />
+						</Link>
 					</div>
 				</Hero>
 
