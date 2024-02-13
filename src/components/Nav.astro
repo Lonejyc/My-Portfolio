@@ -1,5 +1,4 @@
 ---
-import Icon from './Icon.astro';
 import logo from '../images/logo.svg';
 
 /** Main menu items */
@@ -12,16 +11,15 @@ const textLinks: { label: string; href: string }[] = [
 
 <nav class="navbar">
 	<div class="header-left">
-		<a href="/" class="site-title">
+		<a href="/" class="logo">
 			<img src={logo.src} alt="Logo JMB">
 		</a>
 	</div>
-
-	<div id="menu-content" >
-		<ul class="nav-items">
+	<div class="header-right" >
+		<ul class="nav_links">
 			{
 				textLinks.map(({ label, href }) => (
-					<li>
+					<li class="nav_link">
 						<a
 							aria-current={Astro.url.pathname === href}
 							class:list={[
