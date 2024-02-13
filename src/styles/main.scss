@@ -180,3 +180,9 @@
 
 @import "animations.scss";
 @import "layouts/header.scss";
+@import "layouts/hero.scss";
+
+.wrap {
+    max-width: 95%;
+    margin: 0 auto;
+}

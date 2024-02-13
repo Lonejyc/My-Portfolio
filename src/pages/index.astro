@@ -24,15 +24,15 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div>
-		<div>
-			<header class="hero">
+	<main>
+		<div class="wrap">
+			<section class="top">
 				<Hero
 					title="HI, I'M"
 					options={["Jocelyn", "Student", "Web Developper", "Volleyball player", "Jocelyn"]}
 					align="start"
 				>
-					<div class="roles">
+					<div class="links">
 						<Link
 							name="LinkedIn"
 							link="https://www.linkedin.com/in/jocelyn-marcilloux-buisson/"
@@ -53,20 +53,18 @@ const projects = (await getCollection('work'))
 						</Link>
 					</div>
 				</Hero>
-
-				<!-- <img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/> -->
-			</header>
+				<article class="about">
+					<h2>About me</h2>
+					<p>I'm a student in MMI (Multimedia and Internet Jobs) at the University of Savoie Mont-Blanc. I'm 19 years old and I live in Aix-Les-Bains. 
+						I love coding and learn new code languages. I'm very curious and I love to keep up to date with code news.
+						I'm actually learning a lot of languages, but I mainly work on basic stuff like front-end developpement in HTML/SCSS. I'm also starting to learn Frameworks like React and Astro.
+					</p>
+				</article>
+			</section>
 
 			<!-- <Skills /> -->
 		</div>
 
-		<main></main>
-
 		<ContactCTA />
-	</div>
+	</main>
 </BaseLayout>

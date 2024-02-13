@@ -21,21 +21,3 @@ const { align = 'center', options, title } = Astro.props;
 	</div>
 	<slot />
 </div>
-
-<style>
-	.slide {
-		height: 100px;
-		overflow: hidden;
-	}
-
-	.anim {
-		animation: anim 15s ease-in-out infinite;
-	}
-
-	.animation {
-		font-size: 72px;
-		line-height: 100px;
-		color: transparent;
-		-webkit-text-stroke: var(--secondary) 1.2px;
-	}
-</style>

@@ -8,35 +8,36 @@ const textLinks: { label: string; href: string }[] = [
 	{ label: 'Contact', href: '#about' },
 ];
 ---
-
-<nav class="navbar">
-	<div class="header-left">
-		<a href="/" class="logo">
-			<img src={logo.src} alt="Logo JMB">
-		</a>
-	</div>
-	<div class="header-right" >
-		<ul class="nav_links">
-			{
-				textLinks.map(({ label, href }) => (
-					<li class="nav_link">
-						<a
-							aria-current={Astro.url.pathname === href}
-							class:list={[
-								'link',
-								{
-									active:
+<header>
+	<nav class="navbar">
+		<div class="header-left">
+			<a href="/" class="logo">
+				<img src={logo.src} alt="Logo JMB">
+			</a>
+		</div>
+		<div class="header-right" >
+			<ul class="nav_links">
+				{
+					textLinks.map(({ label, href }) => (
+						<li class="nav_link">
+							<a
+								aria-current={Astro.url.pathname === href}
+								class:list={[
+									'link',
+									{
+										active:
 										Astro.url.pathname === href ||
 										(href !== '/' && Astro.url.pathname.startsWith(href)),
-								},
-							]}
-							href={href}
-						>
-							{label}
-						</a>
-					</li>
-				))
-			}
-		</ul>
-	</div>
-</nav>
+									},
+								]}
+								href={href}
+								>
+								{label}
+							</a>
+						</li>
+						))
+					}
+			</ul>
+		</div>
+	</nav>
+</header>
