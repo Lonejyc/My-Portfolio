@@ -182,6 +182,10 @@
 @import "layouts/header.scss";
 @import "layouts/hero.scss";
 
+body {
+    background: var(--background-3);
+}
+
 .wrap {
     max-width: 95%;
     margin: 0 auto;
