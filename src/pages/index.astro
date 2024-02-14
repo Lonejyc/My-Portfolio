@@ -8,6 +8,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Link from '../components/Link.astro';
 import Icon from '../components/Icon.astro';
+import Grid from '../components/Grid.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -60,6 +62,20 @@ const projects = (await getCollection('work'))
 						I'm actually learning a lot of languages, but I mainly work on basic stuff like front-end developpement in HTML/SCSS. I'm also starting to learn Frameworks like React and Astro.
 					</p>
 				</article>
+			</section>
+			<section class="mid" id="projects">
+				<h2>Realisations</h2>
+				<div class="slider">
+					<Grid variant="offset">
+						{
+							projects.map((project) => (
+								<li>
+									<PortfolioPreview project={project} />
+								</li>
+							))
+						}
+					</Grid>
+				</div>
 			</section>
 		</div>
 

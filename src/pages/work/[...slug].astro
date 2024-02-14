@@ -8,6 +8,9 @@ import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 
+// Styles
+import '../../styles/main.scss';
+
 interface Props {
 	entry: CollectionEntry<'work'>;
 }
@@ -32,7 +35,7 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/#projets"><Icon icon="arrow-left" />Projets</a>
+					<a class="back-link" href="/#projets"><Icon icon="arrow-left" />Return</a>
 					<Hero title={entry.data.title} align="start" options={["Réalisation"]}>
 						<div class="details">
 							<p class="description">{entry.data.description}</p>
@@ -57,13 +60,28 @@ const { Content } = await entry.render();
 </BaseLayout>
 
 <style>
-	header {
-		padding-bottom: 2.5rem;
-		border-bottom: 1px solid var(--gray-800);
-	}
 
 	.back-link {
-		display: none;
+		position: relative;
+		display: inline-block;
+		&:after {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 1px;
+			margin-top: 5px;
+			transform: scaleX(0);
+			background-color: var(--text-color); 
+			transform-origin: bottom right;
+			transition: transform 0.25s ease-in-out;
+		}
+		&:hover:after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
 	}
 
 	.details {
