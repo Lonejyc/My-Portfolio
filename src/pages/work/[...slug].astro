@@ -39,6 +39,9 @@ const { Content } = await entry.render();
 					<Hero title={entry.data.title} align="start" options={["Réalisation"]}>
 						<div class="details">
 							<p class="description">{entry.data.description}</p>
+							<div class="tags">
+								{entry.data.support.map((s) => <Pill>{s}</Pill>)}
+							</div>
 						</div>
 					</Hero>
 				</div>
@@ -48,9 +51,6 @@ const { Content } = await entry.render();
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content">
 						<Content />
-						<div class="tags">
-							{entry.data.support.map((s) => <Pill>{s}</Pill>)}
-						</div>
 					</div>
 				</div>
 			</main>
@@ -137,15 +137,12 @@ const { Content } = await entry.render();
 		color: var(--gray-0);
 	}
 
-	.back-link,
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;
 		text-underline-offset: 0.25em;
 		transition: text-decoration-color var(--theme-transition);
 	}
 
-	.back-link:hover,
-	.back-link:focus,
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
