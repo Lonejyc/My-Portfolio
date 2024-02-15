@@ -71,11 +71,11 @@
 	--theme-transition: 0.2s ease-in-out;
 
 	/* Backgrounds */
-	--background-1: url('../../public/assets/backgrounds/background1.png') no-repeat center center / cover;
-	--background-2: url('../../public/assets/backgrounds/background2.png') no-repeat center center / cover;
-	--background-3: url('../../public/assets/backgrounds/background3.png') no-repeat center center / cover;
-	--background-4: url('../../public/assets/backgrounds/background4.png') no-repeat center center / cover;
-	--background-5: url('../../public/assets/backgrounds/background5.png') no-repeat center center / cover;
+	--background-1: url('/assets/backgrounds/background1.png') no-repeat center center / cover;
+	--background-2: url('/assets/backgrounds/background2.png') no-repeat center center / cover;
+	--background-3: url('/assets/backgrounds/background3.png') no-repeat center center / cover;
+	--background-4: url('/assets/backgrounds/background4.png') no-repeat center center / cover;
+	--background-5: url('/assets/backgrounds/background5.png') no-repeat center center / cover;
 }
 
 :root.theme-dark {
