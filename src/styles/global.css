@@ -34,7 +34,9 @@
 
 	/* Gradients */
 	--gradient-1: linear-gradient(-150deg, #8dd3f6, #83c8ed, #78bce4, #6fb1da, #65a6d1, #68a1ce, #6b9bcb, #6e96c8, #7e95c9, #8d94c9, #9c92c7, #a991c4);
+	--gradient-1-invert: linear-gradient(150deg, #8dd3f6, #83c8ed, #78bce4, #6fb1da, #65a6d1, #68a1ce, #6b9bcb, #6e96c8, #7e95c9, #8d94c9, #9c92c7, #a991c4);
 	--gradient-2: linear-gradient(-150deg, #a991c4, #b099c8, #b6a0cc, #bda8d1, #c3b0d5, #c2b5db, #c2bae1, #c1bfe6, #b6c4ed, #a9c9f3, #9bcef6, #8dd3f6);
+	--gradient-2-invert: linear-gradient(150deg, #a991c4, #b099c8, #b6a0cc, #bda8d1, #c3b0d5, #c2b5db, #c2bae1, #c1bfe6, #b6c4ed, #a9c9f3, #9bcef6, #8dd3f6);
 	--gradient-3: linear-gradient(-150deg, #4fb4fd, #5cadff, #6da6ff, #819eff, #9594fd, #9687f5, #987aed, #9b6ce3, #8c59d6, #7d45c9, #6d30bb, #5e18ae);
 	--gradient-3-invert: linear-gradient(150deg, #4fb4fd, #5cadff, #6da6ff, #819eff, #9594fd, #9687f5, #987aed, #9b6ce3, #8c59d6, #7d45c9, #6d30bb, #5e18ae);
 	--gradient-4: linear-gradient(-150deg, #4fb4fd, #61a9f7, #729eee, #8092e4, #8d86d8, #ab7ed2, #c574c6, #dc6bb4, #ff6697, #ff6f70, #ff8645, #ffa500);
