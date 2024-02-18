@@ -69,9 +69,7 @@ const projects = (await getCollection('work'))
 					<Grid variant="offset">
 						{
 							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
+								<PortfolioPreview project={project} />
 							))
 						}
 					</Grid>
