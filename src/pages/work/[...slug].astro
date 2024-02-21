@@ -36,12 +36,12 @@ const { Content } = await entry.render();
 			<header>
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/#projets"><Icon icon="arrow-left" />Return</a>
-					<Hero title={entry.data.title} align="start" options={["Réalisation"]}>
+					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<p class="description">{entry.data.description}</p>
-							<div class="tags">
-								{entry.data.support.map((s) => <Pill>{s}</Pill>)}
-							</div>
+							<ul class="tags">
+								{entry.data.support.map((s) => <li>{s}</li>)}
+							</ul>
 						</div>
 					</Hero>
 				</div>
@@ -86,16 +86,10 @@ const { Content } = await entry.render();
 
 	.details {
 		display: flex;
-		flex-direction: column;
 		padding: 0.5rem;
 		gap: 1.5rem;
 		justify-content: space-between;
-		align-items: center;
-	}
-
-	.tags {
-		display: flex;
-		gap: 0.5rem;
+		align-items: end;
 	}
 
 	.description {
