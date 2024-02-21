@@ -65,15 +65,13 @@ const projects = (await getCollection('work'))
 			</section>
 			<section class="mid" id="projects">
 				<h2>Realisations</h2>
-				<div class="slider">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<PortfolioPreview project={project} />
-							))
-						}
-					</Grid>
-				</div>
+				<Grid variant="offset">
+					{
+						projects.map((project) => (
+							<PortfolioPreview project={project} />
+						))
+					}
+				</Grid>
 			</section>
 		</div>
 
