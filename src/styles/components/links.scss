@@ -1,0 +1,22 @@
+.link_ {
+    color: var(--link-color);
+    position: relative;
+    display: inline-block;
+    &:after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0);
+        background-color: currentColor; 
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-in-out;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}

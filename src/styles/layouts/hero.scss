@@ -48,6 +48,11 @@ main {
                 text-align: center;
                 color: var(--text-color)
             }
+            .link_ {
+                display: flex;
+                margin: 10px auto;
+                width: fit-content;
+            }
         }
     }
 }
