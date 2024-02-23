@@ -185,6 +185,10 @@
 @import "components/tags.scss";
 @import "components/links.scss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--background-3);
 }

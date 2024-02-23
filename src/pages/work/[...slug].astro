@@ -6,6 +6,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
+import Link from '../../components/Link.astro';
 
 // Styles
 import '../../styles/main.scss';
@@ -51,6 +52,12 @@ const { Content } = await entry.render();
 					<div class="content">
 						<Content />
 					</div>
+					<Link
+						name="GitHub"
+						link={entry.data.git}
+					>
+						<Icon icon="github-logo" size="1.33em" />
+					</Link>
 				</div>
 			</main>
 		</div>
@@ -128,17 +135,6 @@ const { Content } = await entry.render();
 		padding-inline-start: 1.5rem;
 		border-inline-start: 0.25rem solid var(--accent-dark);
 		color: var(--gray-0);
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
 	}
 
 	@media (min-width: 50em) {
