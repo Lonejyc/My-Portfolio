@@ -39,6 +39,9 @@ const textLinks: { label: string; href: string }[] = [
 					}
 			</ul>
 		</div>
+		<button class="burger">
+			<span class="line"></span>
+		</button>
 	</nav>
 </header>
 <script>
@@ -58,4 +61,23 @@ const textLinks: { label: string; href: string }[] = [
 
 	tl.from('.logo', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'});
 	tl.from('.nav_link', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
+	tl.from('.burger', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=1');
+
+
+	function toggleMenu() {
+		const nav = document.querySelector('.navbar');
+		const burger = document.querySelector('.burger');
+		const navLink = document.querySelectorAll('.nav_link a');
+
+		burger.addEventListener('click', () => {
+			nav.classList.toggle('show_nav');
+		});
+		navLink.forEach((link) => {
+			link.addEventListener('click', () => {
+				nav.classList.remove('show_nav');
+				console.log('clicked');
+			});
+		});
+	}
+	toggleMenu();
 </script>

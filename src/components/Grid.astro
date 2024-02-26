@@ -9,11 +9,3 @@ const { variant } = Astro.props;
 <ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small' }]}>
 	<slot />
 </ul>
-
-<style>
-	.grid {
-		display: flex;
-		gap: 1rem;
-		margin: 64px 0;
-	}
-</style>

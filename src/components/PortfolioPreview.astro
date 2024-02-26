@@ -32,6 +32,10 @@ const { data, slug } = Astro.props.project;
 		width: calc(100%/3 - 1rem);
 		overflow: hidden;
 		transition: transform 0.2s ease-in-out;
+		@media screen and (max-width: 768px) {
+			width: calc(100% - 1rem);
+			justify-content: center;
+		}
 	}
 
 	.card:hover {
@@ -54,6 +58,10 @@ const { data, slug } = Astro.props.project;
 		height: 17vw;
 		max-height: 17vw;
 		overflow: hidden;
+		@media screen and (max-width: 768px) {
+			height: 50vw;
+			max-height: 50vw;
+		}
 		
 		img {
 			width: 100%;
@@ -76,16 +84,13 @@ const { data, slug } = Astro.props.project;
 		}
 	}
 
+	.card {
+		/* height: 22rem; */
+		border-radius: 1.5rem;
+	}
 	
-	@media (min-width: 50em) {
-		.card {
-			/* height: 22rem; */
-			border-radius: 1.5rem;
-		}
-		
-		.title {
-			border-radius: 0.9375rem;
-		}
+	.title {
+		border-radius: 0.9375rem;
 	}
 /* .title {
 	z-index: 1;

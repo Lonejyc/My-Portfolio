@@ -54,5 +54,112 @@
                 }
             }
         }
+        @include m {
+            .nav_links {
+                display: flex;
+                flex-direction: column;
+                overflow-x: hidden;
+                width: 0;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: var(--primary-light);
+                z-index: 1;
+                margin-inline: 0px;
+                transition: all 0.5s ease-in-out;
+                .nav_link {
+                    transform: translateX(101%);
+                    margin-top: 10px;
+                    margin-inline: 10px;
+                    &:nth-child(1){
+                        margin-top: 80px;
+                    }
+                }
+                .nav_link > a {
+                    display: block;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    color: var(--secondary-dark);
+                    transition: all 0.4s ease-in-out;
+                    &:hover {
+                        letter-spacing: 4px;
+                        padding-left: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    .burger {
+        display: none;
+        @include m {
+            margin-inline: 30px;
+            display: block;
+            position: relative;
+            padding: 0;
+            margin-right: 10px;
+            width: 45px;
+            height: 45px;
+            z-index: 2;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            .line {
+                display: block;
+                width: 45px;
+                height: 4px;
+                background-color: var(--primary-light);
+                border-radius: 3px;
+                transition: all 0.5s ease-in-out;
+                &:after, &:before {
+                    content: "";
+                    width: 45px;
+                    height: 4px;
+                    position: absolute;
+                    left: 0;
+                    background-color: var(--primary-light);
+                    border-radius: 3px;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:before {
+                    transform: translateY(-12px);
+                }
+            
+                &:after {
+                    transform: translateY(12px);
+                }
+            }
+        }
+    }
+}
+@include m {
+    .navbar.show_nav {
+        .nav_links {
+            width: 100%;
+            .nav_link {
+                transform: translateX(0);
+                &:nth-child(1) {
+                    transition: all 1s ease-out;
+                }
+                &:nth-child(2) {
+                    transition: all 1.1s ease-out;
+                }
+                &:nth-child(3) {
+                    transition: all 1.2s ease-out;
+                }
+            }
+        }
+        .burger .line {
+            width: 0;
+            background-color: transparent;
+            &:before {
+                transform: rotate(45deg);
+                background-color: var(--secondary-dark);
+            }
+            &:after {
+                transform: rotate(-45deg);
+                background-color: var(--secondary-dark);
+            }
+        }
     }
 }
