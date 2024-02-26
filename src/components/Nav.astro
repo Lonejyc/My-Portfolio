@@ -41,3 +41,21 @@ const textLinks: { label: string; href: string }[] = [
 		</div>
 	</nav>
 </header>
+<script>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	gsap.registerPlugin(ScrollTrigger);
+	
+	
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.navbar',
+			start: 'top 80%',
+			end: 'bottom 20%',
+			toggleActions: 'play none none none'
+		}
+	});
+
+	tl.from('.logo', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'});
+	tl.from('.nav_link', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
+</script>

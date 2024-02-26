@@ -64,6 +64,34 @@ const projects = (await getCollection('work'))
 					<a href="CV_Jocelyn_Marcilloux-Buisson.pdf" download="CV_Jocelyn_Marcilloux-Buisson" class="link_">Download my CV</a>
 				</article>
 			</section>
+			<script>
+				import { gsap } from 'gsap';
+				import { ScrollTrigger } from 'gsap/ScrollTrigger';
+				gsap.registerPlugin(ScrollTrigger);
+				
+				
+				let tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: '.wrap',
+						start: 'top 80%',
+						end: 'bottom 20%',
+						toggleActions: 'play none none none'
+					}
+				});
+
+				tl.from('.links', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '+=0.2');
+				tl.from('.about', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.9');
+				let tl2 = gsap.timeline({
+					scrollTrigger: {
+						trigger: '.mid',
+						start: 'top 80%',
+						end: 'bottom 20%',
+						toggleActions: 'play none none none'
+					}
+				});
+
+				tl2.from('.mid', { opacity: 0, y: 100, duration: 1, ease: 'power2.out', delay: 0.3 });
+			</script>
 			<section class="mid" id="projects">
 				<h2>Realisations</h2>
 				<Grid variant="offset">
