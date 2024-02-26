@@ -69,12 +69,18 @@ const textLinks: { label: string; href: string }[] = [
 		const burger = document.querySelector('.burger');
 		const navLink = document.querySelectorAll('.nav_link a');
 
-		burger.addEventListener('click', () => {
-			nav.classList.toggle('show_nav');
-		});
+		if (burger) {
+			burger.addEventListener('click', () => {
+				if (nav) {
+					nav.classList.toggle('show_nav');
+				}
+			});
+		}
 		navLink.forEach((link) => {
 			link.addEventListener('click', () => {
-				nav.classList.remove('show_nav');
+				if (nav) {
+					nav.classList.remove('show_nav');
+				}
 				console.log('clicked');
 			});
 		});
