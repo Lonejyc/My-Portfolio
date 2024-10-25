@@ -4,10 +4,20 @@
 
 .grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin: 64px 0;
+
+    > * {
+        flex: 1 1 calc(33.333% - 1rem); // Adjust the width to ensure 3 items per line
+    }
+
     @media screen and (max-width: 768px) {
         align-items: center;
         flex-direction: column;
+
+        > * {
+            flex: 1 1 100%; // Full width for smaller screens
+        }
     }
 }

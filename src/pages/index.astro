@@ -19,7 +19,7 @@ import '../styles/main.scss';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
-	.slice(0, 4);
+	.slice(0, 6);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -57,9 +57,10 @@ const projects = (await getCollection('work'))
 				</Hero>
 				<article class="about">
 					<h2>About me</h2>
-					<p>I'm a student in MMI (Multimedia and Internet Jobs) at the University of Savoie Mont-Blanc. I'm 19 years old and I live in Aix-Les-Bains. 
+					<p>I'm a student in MMI (Multimedia and Internet Jobs) at the University of Savoie Mont-Blanc. I'm 20 years old and I live in Aix-Les-Bains. 
 						I love coding and learn new code languages. I'm very curious and I love to keep up to date with code news.
-						I'm actually learning a lot of languages, but I mainly work on basic stuff like front-end developpement in HTML/SCSS. I'm also starting to learn Frameworks like React and Astro.
+						I'm actually learning a lot of languages, but I mainly work on basic stuff like front-end frameworks or pure Javascript.
+						Besides, I'm a volleyball player and assistant coach for young player. I'm also a big fan of video games and an Apple lover.
 					</p>
 					<a href="CV_Jocelyn_Marcilloux-Buisson.pdf" download="CV_Jocelyn_Marcilloux-Buisson" class="link_">Download my CV</a>
 				</article>
@@ -90,14 +91,16 @@ const projects = (await getCollection('work'))
 					}
 				});
 
-				tl2.from('.mid', { opacity: 0, y: 100, duration: 1, ease: 'power2.out', delay: 0.3 });
+				// tl2.from('.mid', { opacity: 0, y: 100, duration: 1, ease: 'power2.out', delay: 0.3 });
+				tl2.from('.card', { opacity: 0, y: 0, duration: 1, ease: 'power2.out', delay: 0.3, stagger: 0.2 });
 			</script>
 			<section class="mid" id="projects">
-				<h2>Realisations</h2>
+				<h2>Projects</h2>
 				<Grid variant="offset">
 					{
 						projects.map((project) => (
 							<PortfolioPreview project={project} />
+							
 						))
 					}
 				</Grid>

@@ -1,10 +1,12 @@
 ---
 import logo from '../images/logo.svg';
 
+import ThemeToggle from './ThemeToggle.astro';
+
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Projects', href: '#projects' },
-	{ label: 'Skills', href: '#skills' },
+	// { label: 'Skills', href: '#skills' },
 	{ label: 'Contact', href: '#contact' },
 ];
 ---
@@ -16,6 +18,7 @@ const textLinks: { label: string; href: string }[] = [
 			</a>
 		</div>
 		<div class="header-right" >
+			<!-- <ThemeToggle /> -->
 			<ul class="nav_links">
 				{
 					textLinks.map(({ label, href }) => (
@@ -60,7 +63,7 @@ const textLinks: { label: string; href: string }[] = [
 	});
 
 	tl.from('.logo', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'});
-	tl.from('.nav_link', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
+	tl.from('.header-right', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
 	tl.from('.burger', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=1');
 
 
