@@ -35,18 +35,17 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/#projects"><Icon icon="arrow-left" />Return</a>
-					<Hero title={entry.data.title} align="start">
-						<div class="details">
-							<p class="description">{entry.data.description}</p>
-							<ul class="tags">
-								{entry.data.support.map((s) => <li>{s}</li>)}
-							</ul>
-						</div>
-					</Hero>
+					<a class="back-link w-fit" href="/#projects"><Icon icon="arrow-left" />Return</a>
+					<h1 class="max-md:text-3xl">{entry.data.title}</h1>
+					<div class="details max-md:flex-col">
+						<p class="description">{entry.data.description}</p>
+						<ul class="tags">
+							{entry.data.support.map((s) => <li>{s}</li>)}
+						</ul>
+					</div>
 				</div>
 			</header>
-			<main class="wrapper">
+			<main class="wrapper max-md:mt-8">
 				<div class="stack gap-10 content">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content">

@@ -63,7 +63,9 @@ const textLinks: { label: string; href: string }[] = [
 	});
 
 	tl.from('.logo', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'});
-	tl.from('.header-right', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
+	if (window.innerWidth > 768) {
+		tl.from('.header-right', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=0.8');
+	}
 	tl.from('.burger', { opacity: 0, y: 100, duration: 1, ease: 'power2.out'}, '-=1');
 
 
@@ -84,7 +86,6 @@ const textLinks: { label: string; href: string }[] = [
 				if (nav) {
 					nav.classList.remove('show_nav');
 				}
-				console.log('clicked');
 			});
 		});
 	}

@@ -124,8 +124,8 @@ body {
 }
 
 body {
-	background-color: var(--gray-999);
-	color: var(--gray-200);
+	background-color: var(--background);
+	color: var(--text-color);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
@@ -155,7 +155,7 @@ h5 {
 	line-height: 1.1;
 	font-family: var(--font-brand);
 	font-weight: 900;
-	color: var(--gray-100);
+	color: var(--text-color);
 }
 
 h1 {

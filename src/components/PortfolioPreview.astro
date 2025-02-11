@@ -31,7 +31,9 @@ const { data, slug } = Astro.props.project;
 		position: relative;
 		width: calc(100%/3 - 1rem);
 		overflow: hidden;
-		transition: transform 0.2s ease-in-out;
+		box-shadow: #ccbadb18 0px 7px 29px 0px;
+		scale: 0;
+		transition: transform 0.3s ease-in-out;
 		@media screen and (max-width: 768px) {
 			width: calc(100% - 1rem);
 			justify-content: center;
@@ -39,7 +41,7 @@ const { data, slug } = Astro.props.project;
 	}
 
 	.card:hover {
-		transform: scale(1.03);
+		transform: scale(1.03) !important;
 	}
 
 	.background {

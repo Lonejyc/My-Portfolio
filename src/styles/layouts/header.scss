@@ -135,7 +135,7 @@
 @include m {
     .navbar.show_nav {
         .nav_links {
-            width: 100%;
+            width: 100vw;
             .nav_link {
                 transform: translateX(0);
                 &:nth-child(1) {
