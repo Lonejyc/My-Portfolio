@@ -9,6 +9,6 @@ support:
   - TypeScript
   - Tailwind
 git:
-  https://github.com/Lonejyc/
+  https://github.com/Lonejyc/portfolio-nono
 ---
 
